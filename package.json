@@ -1,0 +1,97 @@
+{
+  "name": "@ryanhefner/next-prismic",
+  "version": "0.1.0",
+  "description": "Compose Prismic queries into your Next.js projects.",
+  "repository": "ryanhefner/next-prismic",
+  "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryanhefner/next-prismic/issues"
+  },
+  "homepage": "https://github.com/ryanhefner/next-prismic#readme",
+  "files": [
+    "es",
+    "src",
+    "types",
+    "index.js",
+    "initPrismic.js",
+    "withPrismic.js"
+  ],
+  "directories": {
+    "lib": "/src"
+  },
+  "main": "index.js",
+  "module": "es/index.js",
+  "jsnext:main": "src/index.js",
+  "types": "types",
+  "scripts": {
+    "clean": "rm -f index.js && rm -f initPrismic.js && rm -f withPrismic.js && rm -rf es && rm -rf umd",
+    "prebuild": "npm run clean",
+    "build": "node ./tools/build.js",
+    "watch": "babel ./src -d . --ignore __mocks__,__tests__,**/*.test.js --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "node ./tools/build.js",
+    "push-release": "git push origin master && git push --tags",
+    "dtslint": "dtslint types",
+    "test": "jest --findRelatedTests src/index.js"
+  },
+  "peerDependencies": {
+    "next": ">=8.0",
+    "react": ">=16.3",
+    "react-dom": ">=16.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.0",
+    "@ryanhefner/react-prismic": "^0.1.0",
+    "@types/react": "^16.8.23",
+    "creature-cache": "^0.1.1",
+    "flatted": "^2.0.1",
+    "next-utils": "^0.1.1",
+    "prop-types": "^15.6.2",
+    "react-hoc-helpers": "^0.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-dev-expression": "^0.2.2",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-polyfill": "^6.26.0",
+    "coveralls": "^3.0.5",
+    "dtslint": "^0.8.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "greenkeeper-lockfile": "^1.15.1",
+    "gzip-size": "^5.1.1",
+    "jest": "^24.8.0",
+    "jest-enzyme": "^7.0.1",
+    "jsdom": "^15.1.1",
+    "next": "^8.1.0",
+    "pretty-bytes": "^5.3.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6",
+    "regenerator-runtime": "^0.13.3",
+    "rollup": "^1.21.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.2",
+    "rollup-watch": "^4.3.1",
+    "typescript": "^3.5.3"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ]
+  }
+}
