@@ -1,7 +1,8 @@
 # next-prismic
 
-[![npm version](https://badge.fury.io/js/next-prismic.svg)](https://badge.fury.io/js/next-prismic)
-[![npm](https://img.shields.io/npm/l/express.svg)](LICENSE)
+[![npm](https://img.shields.io/npm/v/@ryanhefner/next-prismic?style=flat-square)](https://www.npmjs.com/package/@ryanhefner/next-prismic)
+[![NPM](https://img.shields.io/npm/l/@ryanhefner/next-prismic?style=flat-square)](https://www.npmjs.com/package/@ryanhefner/next-prismic)
+[![npm](https://img.shields.io/npm/dt/@ryanhefner/next-prismic?style=flat-square)](https://www.npmjs.com/package/@ryanhefner/next-prismic)
 
 React library for integrating [`@ryanhefner/react-prismic`](https://npmjs.com/package/@ryanhefner/react-prismic)
 into the server-side rendering of your [Next.js](https://nextjs.org) app.
@@ -23,7 +24,7 @@ yarn add @ryanhefner/next-prismic
 ## How to use
 
 To use `next-prismic`, just set the parameters that will be used by the
-`PrismicClient` from [`react-prismic`](https://github.com/ryanhefner/react-prismic)
+`PrismicClient` from [`@ryanhefner/react-prismic`](https://github.com/ryanhefner/react-prismic)
 and wraps your Next.js app in a `PrismicProvider` and handles initiating both
 the `PrismicClient` for both SSR/requests and the browser client.
 
@@ -78,7 +79,7 @@ export default withPrismic({
 ### `withPrismic`
 
 Higher-order component that takes the options provided, wraps your app within
-a `PrimicProvider` (from [`react-prismic`](https://github.com/ryanhefner/react-prismic))
+a `PrimicProvider` (from [`@ryanhefner/react-prismic`](https://github.com/ryanhefner/react-prismic))
 and performs the necessary server-side rendering logic to deliver your React
 app with all your Prismic data pre-requested/compiled into it.
 
