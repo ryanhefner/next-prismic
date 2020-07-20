@@ -1,6 +1,6 @@
 {
   "name": "@ryanhefner/next-prismic",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Compose Prismic queries into your Next.js projects.",
   "repository": "ryanhefner/next-prismic",
   "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
